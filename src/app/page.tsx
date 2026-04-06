@@ -1,103 +1,174 @@
-import Image from "next/image";
+// src/app/page.tsx
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Phone, ArrowRight, Certificate, Clock, CurrencyDollar } from '@phosphor-icons/react/dist/ssr';
+import FadeIn from '@/components/FadeIn';
+import ServiceCard from '@/components/ServiceCard';
+import TestimonialCard from '@/components/TestimonialCard';
+import { SITE, SERVICES, TESTIMONIALS } from '@/lib/content';
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Westlake Auto Repair | Brakes, Exhaust & More',
+  description: `Mogo Auto Services - ASE certified auto repair in Westlake, OH. Brakes, exhaust, tires, oil changes & more. Call ${SITE.phone}.`,
+};
+
+const PILLARS = [
+  {
+    icon: Certificate,
+    title: 'ASE Certified',
+    body: 'Our mechanics are ASE certified and trained to service all makes and models to the highest standard.',
+  },
+  {
+    icon: Clock,
+    title: '20+ Years Experience',
+    body: 'Proudly serving the Westlake community for over two decades. You can count on us to get it right.',
+  },
+  {
+    icon: CurrencyDollar,
+    title: 'Unbeatable Prices',
+    body: 'Quality auto repair should be accessible for everyone. We offer competitive pricing without cutting corners.',
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* Hero */}
+      <section className="relative bg-zinc-900 min-h-[100dvh] flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-900 to-red-mogo/20" />
+        <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-20">
+          <div className="max-w-2xl">
+            <p className="text-red-mogo text-sm font-semibold uppercase tracking-widest mb-6">
+              Westlake, Ohio &bull; ASE Certified
+            </p>
+            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-none mb-6">
+              Auto repair<br />done right.
+            </h1>
+            <p className="text-zinc-400 text-lg leading-relaxed mb-10 max-w-lg">
+              {SITE.tagline} Serving Westlake and the surrounding area for over 20 years.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href={SITE.phoneHref}
+                className="inline-flex items-center gap-2 bg-red-mogo hover:bg-red-mogo-dark text-white font-semibold px-6 py-3 rounded transition-colors"
+              >
+                <Phone size={18} weight="bold" />
+                Call {SITE.phone}
+              </a>
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 border border-zinc-600 hover:border-zinc-400 text-white font-semibold px-6 py-3 rounded transition-colors"
+              >
+                Our Services
+                <ArrowRight size={18} />
+              </Link>
+            </div>
+            <p className="mt-8 text-zinc-500 text-sm">
+              {SITE.rating} stars &bull; {SITE.reviewCount}+ reviews
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Why Mogo */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-widest text-red-mogo mb-3">Why Mogo</p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-14">
+              The shop Westlake trusts.
+            </h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {PILLARS.map((p, i) => {
+              const PillarIcon = p.icon;
+              return (
+                <FadeIn key={p.title} delay={i * 0.1}>
+                  <div className="border-t-2 border-red-mogo pt-6">
+                    <PillarIcon size={28} weight="bold" className="text-red-mogo mb-4" />
+                    <h3 className="font-bold text-lg mb-2">{p.title}</h3>
+                    <p className="text-zinc-500 text-sm leading-relaxed">{p.body}</p>
+                  </div>
+                </FadeIn>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview */}
+      <section className="py-24 bg-zinc-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="flex items-end justify-between mb-14">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-red-mogo mb-3">Services</p>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">What we do.</h2>
+              </div>
+              <Link
+                href="/services"
+                className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-zinc-500 hover:text-zinc-900 transition-colors"
+              >
+                See all services <ArrowRight size={15} />
+              </Link>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SERVICES.slice(0, 6).map((service, i) => (
+              <FadeIn key={service.title} delay={i * 0.05}>
+                <ServiceCard service={service} />
+              </FadeIn>
+            ))}
+          </div>
+          <div className="mt-10 md:hidden">
+            <Link href="/services" className="inline-flex items-center gap-2 text-sm font-medium text-red-mogo">
+              See all services <ArrowRight size={15} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <p className="text-xs font-semibold uppercase tracking-widest text-red-mogo mb-3">Reviews</p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-14">
+              {SITE.rating} stars. {SITE.reviewCount}+ reviews.
+            </h2>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {TESTIMONIALS.map((t, i) => (
+              <FadeIn key={t.name} delay={i * 0.1}>
+                <TestimonialCard testimonial={t} />
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Strip */}
+      <section className="bg-red-mogo py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tighter mb-2">
+                  Ready to get back on the road?
+                </h2>
+                <p className="text-red-100 text-sm">Mon-Fri 8am-5pm &bull; Sat 9am-1pm</p>
+              </div>
+              <a
+                href={SITE.phoneHref}
+                className="shrink-0 inline-flex items-center gap-3 bg-white text-red-mogo font-bold text-lg px-8 py-4 rounded hover:bg-zinc-50 transition-colors"
+              >
+                <Phone size={22} weight="bold" />
+                {SITE.phone}
+              </a>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+    </>
   );
 }
