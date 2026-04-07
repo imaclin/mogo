@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description: `${SITE.name} - ${SITE.tagline} ASE certified mechanics serving Westlake, Ohio for 20+ years.`,
     images: [
       {
-        url: '/mogosocial.png',
+        url: 'https://mogo-maclin.vercel.app/mogosocial.png',
         width: 1200,
         height: 630,
         alt: SITE.name,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE.name} | Westlake, OH Auto Repair`,
     description: `${SITE.name} - ${SITE.tagline} ASE certified mechanics serving Westlake, Ohio for 20+ years.`,
-    images: ['/mogosocial.png'],
+    images: ['https://mogo-maclin.vercel.app/mogosocial.png'],
     creator: '@mogoautoservices',
   },
   alternates: {
