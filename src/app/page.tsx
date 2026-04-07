@@ -34,8 +34,15 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-zinc-900 min-h-[100dvh] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-900 to-red-mogo/20" />
+      <section className="relative min-h-[100dvh] flex items-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/mogo.jpg)',
+            filter: 'blur(2px)',
+          }}
+        />
+        <div className="absolute inset-0 bg-zinc-900/90" />
         <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-20">
           <div className="max-w-2xl">
             <p className="text-red-mogo text-sm font-semibold uppercase tracking-widest mb-6">
@@ -156,7 +163,6 @@ export default function HomePage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tighter mb-2">
                   Ready to get back on the road?
                 </h2>
-                <p className="text-red-100 text-sm">Mon-Fri 8am-5pm &bull; Sat 9am-1pm</p>
               </div>
               <a
                 href={SITE.phoneHref}

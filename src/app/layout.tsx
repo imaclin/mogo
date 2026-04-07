@@ -13,8 +13,61 @@ export const metadata: Metadata = {
     default: `${SITE.name} | Westlake, OH Auto Repair`,
     template: `%s | ${SITE.name}`,
   },
-  description: `${SITE.name} — ${SITE.tagline} ASE certified mechanics serving Westlake, Ohio for 20+ years. Brakes, exhaust, tires, oil changes & more.`,
+  description: `${SITE.name} - ${SITE.tagline} ASE certified mechanics serving Westlake, Ohio for 20+ years. Brakes, exhaust, tires, oil changes & more.`,
   metadataBase: new URL('https://mogoautoservices.com'),
+  keywords: ['auto repair', 'car repair', 'mechanic', 'Westlake OH', 'brake repair', 'oil change', 'tire service', 'exhaust repair', 'ASE certified'],
+  authors: [{ name: SITE.name }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://mogoautoservices.com',
+    siteName: SITE.name,
+    title: `${SITE.name} | Westlake, OH Auto Repair`,
+    description: `${SITE.name} - ${SITE.tagline} ASE certified mechanics serving Westlake, Ohio for 20+ years.`,
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+        alt: SITE.name,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${SITE.name} | Westlake, OH Auto Repair`,
+    description: `${SITE.name} - ${SITE.tagline} ASE certified mechanics serving Westlake, Ohio for 20+ years.`,
+    images: ['/logo.png'],
+    creator: '@mogoautoservices',
+  },
+  alternates: {
+    canonical: 'https://mogoautoservices.com',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.png', sizes: '32x32' },
+      { url: '/favicon.png', sizes: '16x16' },
+    ],
+    apple: [
+      { url: '/favicon.png', sizes: '180x180' },
+    ],
+  },
+  verification: {
+    google: 'your-google-verification-code', // Add your Google Search Console verification code
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
