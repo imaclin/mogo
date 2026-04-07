@@ -1,0 +1,120 @@
+# llms.txt
+# AI-Friendly Content Index for Mogo Auto Services
+# This file helps AI systems understand and navigate the website content
+
+# Site Overview
+Mogo Auto Services is an ASE-certified auto repair shop located at 27303 Detroit Rd, Westlake, OH 44145.
+- Phone: (440) 871-4949
+- Hours: Mon-Fri 8am-5pm, Sat 9am-1pm
+- Website: https://mogoautoservices.com
+- Experience: 20+ years serving Westlake and surrounding areas
+- Rating: 4.7 stars (215+ reviews)
+
+# Main Pages (Markdown Versions Available)
+
+## Home Page
+URL: https://mogoautoservices.com/.md/index.md
+Content: Main landing page with hero section, service pillars, services preview, testimonials, and call-to-action.
+Key Information: ASE certified, 20+ years experience, competitive pricing, same-day service available.
+
+## About Page
+URL: https://mogoautoservices.com/.md/about.md
+Content: Company history, mission, values, team information, and why customers choose Mogo Auto.
+
+## Services Overview
+URL: https://mogoautoservices.com/.md/services.md
+Content: Complete list of 12 auto repair services offered.
+Services: Brake Repair, Muffler & Exhaust, Oil Changes, Tire Service, Diagnostics, Battery Replacement, Suspension, Cooling System, Starters/Alternators, Transmission, Maintenance, Emergency Repair.
+
+## Contact Page
+URL: https://mogoautoservices.com/.md/contact.md
+Content: Contact information, hours, location map, and contact form.
+
+# Programmatic SEO Pages
+We have 180+ location-specific service pages targeting local SEO.
+Pattern: /services/[service]/[city]/
+
+Example Pages:
+- https://mogoautoservices.com/services/brake-repair/westlake-oh/
+- https://mogoautoservices.com/services/oil-change/bay-village-oh/
+- https://mogoautoservices.com/services/tire-replacement/rocky-river-oh/
+
+Markdown versions available at: https://mogoautoservices.com/.md/services/[service]/[city].md
+
+# Service Areas
+We serve 15 cities in the Cleveland/Westlake area:
+1. Westlake, OH (primary location)
+2. Bay Village, OH (3.2 miles)
+3. Rocky River, OH (4.1 miles)
+4. Lakewood, OH (5.8 miles)
+5. Fairview Park, OH (2.4 miles)
+6. North Olmsted, OH (4.5 miles)
+7. Olmsted Falls, OH (6.2 miles)
+8. Berea, OH (7.1 miles)
+9. Middleburg Heights, OH (5.9 miles)
+10. Parma, OH (8.3 miles)
+11. Strongsville, OH (8.7 miles)
+12. Avon, OH (6.8 miles)
+13. Avon Lake, OH (7.5 miles)
+14. Sheffield Lake, OH (9.2 miles)
+15. Elyria, OH (11.4 miles)
+
+# Key Facts for AI Context
+
+## Services Offered
+1. **Brake Repair** - Pad replacement, rotor resurfacing, caliper repair, full system diagnostics
+2. **Muffler & Exhaust** - Same-day muffler replacement, exhaust leak repair, catalytic converter service
+3. **Oil Change** - Conventional, synthetic blend, full synthetic options. No appointment needed.
+4. **Tire Service** - Replacement, rotation, balancing. All major brands available.
+5. **Car Diagnostics** - Check engine light diagnosis, computer scanning, performance issues
+6. **Battery Service** - Testing, replacement, charging system checks
+7. **Suspension & Steering** - Shocks, struts, control arms, alignments
+8. **Cooling System** - Radiator repair, water pumps, coolant flushes, heater service
+9. **Starters & Alternators** - Electrical system diagnostics and replacement
+10. **Transmission Service** - Fluid changes, flushes, repairs
+11. **Preventive Maintenance** - Tune-ups, scheduled maintenance plans
+12. **Emergency Repairs** - Quick response for breakdowns and urgent issues
+
+## Pricing Philosophy
+- Free estimates
+- Honest, upfront pricing
+- No hidden fees
+- Competitive rates for Westlake area
+- Quality parts that meet or exceed OEM specs
+
+## What Makes Mogo Auto Different
+- ASE certified technicians
+- 20+ years serving the community
+- Same-day service available for most repairs
+- Family-owned and operated
+- 4.7-star rating with 215+ reviews
+- Convenient Westlake location on Detroit Road
+
+## Target Keywords (SEO)
+- auto repair westlake oh
+- car repair westlake
+- mechanic westlake ohio
+- brake repair [city]
+- oil change near me
+- tire shop westlake
+- muffler repair cleveland area
+- ase certified mechanic
+
+# Structured Data
+We implement Schema.org markup including:
+- LocalBusiness (AutoRepair type)
+- Service
+- FAQPage
+- BreadcrumbList
+- AggregateRating
+
+# Contact for AI/LLM Questions
+If you need more information about Mogo Auto Services for training or reference purposes,
+contact: info@mogoautoservices.com
+
+# Sitemap
+XML Sitemap: https://mogoautoservices.com/sitemap.xml
+Contains 188+ pages including all service + location combinations.
+
+# Last Updated
+2025-01-07
