@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     description: `${SITE.name} - ${SITE.tagline} ASE certified mechanics serving Westlake, Ohio for 20+ years.`,
     images: [
       {
-        url: '/logo.png',
-        width: 800,
-        height: 600,
+        url: '/mogosocial.png',
+        width: 1200,
+        height: 630,
         alt: SITE.name,
       },
     ],
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE.name} | Westlake, OH Auto Repair`,
     description: `${SITE.name} - ${SITE.tagline} ASE certified mechanics serving Westlake, Ohio for 20+ years.`,
-    images: ['/logo.png'],
+    images: ['/mogosocial.png'],
     creator: '@mogoautoservices',
   },
   alternates: {
